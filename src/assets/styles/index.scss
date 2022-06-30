@@ -1,0 +1,17 @@
+@import './normalize.css';
+@import './transition.scss';
+@import './sidebar.scss';
+
+ol, ul {
+  list-style: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+a, a:focus, a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
