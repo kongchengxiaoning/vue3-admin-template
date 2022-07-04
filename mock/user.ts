@@ -166,13 +166,20 @@ const routes = [
     path: '/list',
     hidden: false,
     component: 'Layout',
-    redirect: 'noRedirect',
+    redirect: '/list/index',
+    meta: {
+      title: '列表',
+      icon: 'list'
+    },
     children: [
       {
         path: 'index',
         name: 'ListIndex',
         component: 'list/index',
-        meta: { title: '自定义列表', icon: 'list' }
+        meta: {
+          title: '自定义列表',
+          icon: 'list'
+        }
       }
     ]
   },
@@ -185,9 +192,7 @@ const routes = [
     alwaysShow: true,
     meta: {
       title: '系统管理',
-      icon: 'system',
-      noCache: false,
-      link: null
+      icon: 'system'
     },
     children: [
       {
@@ -197,9 +202,7 @@ const routes = [
         component: 'system/user/index',
         meta: {
           title: '用户管理',
-          icon: 'user',
-          noCache: false,
-          link: null
+          icon: 'user'
         }
       },
       {
@@ -209,9 +212,7 @@ const routes = [
         component: 'system/role/index',
         meta: {
           title: '角色管理',
-          icon: 'peoples',
-          noCache: false,
-          link: null
+          icon: 'peoples'
         }
       },
       {
@@ -221,9 +222,7 @@ const routes = [
         component: 'system/menu/index',
         meta: {
           title: '菜单管理',
-          icon: 'tree-table',
-          noCache: false,
-          link: null
+          icon: 'tree-table'
         }
       },
       {
@@ -233,9 +232,7 @@ const routes = [
         component: 'system/dept/index',
         meta: {
           title: '部门管理',
-          icon: 'tree',
-          noCache: false,
-          link: null
+          icon: 'tree'
         }
       },
       {
@@ -245,9 +242,7 @@ const routes = [
         component: 'system/post/index',
         meta: {
           title: '岗位管理',
-          icon: 'post',
-          noCache: false,
-          link: null
+          icon: 'post'
         }
       },
       {
@@ -257,9 +252,7 @@ const routes = [
         component: 'system/dict/index',
         meta: {
           title: '字典管理',
-          icon: 'dict',
-          noCache: false,
-          link: null
+          icon: 'dict'
         }
       },
       {
@@ -269,9 +262,7 @@ const routes = [
         component: 'system/config/index',
         meta: {
           title: '参数设置',
-          icon: 'edit',
-          noCache: false,
-          link: null
+          icon: 'edit'
         }
       },
       {
@@ -281,9 +272,7 @@ const routes = [
         component: 'system/notice/index',
         meta: {
           title: '通知公告',
-          icon: 'message',
-          noCache: false,
-          link: null
+          icon: 'message'
         }
       },
       {
@@ -295,9 +284,7 @@ const routes = [
         alwaysShow: true,
         meta: {
           title: '日志管理',
-          icon: 'log',
-          noCache: false,
-          link: null
+          icon: 'log'
         },
         children: [
           {
@@ -307,9 +294,7 @@ const routes = [
             component: 'monitor/operlog/index',
             meta: {
               title: '操作日志',
-              icon: 'form',
-              noCache: false,
-              link: null
+              icon: 'form'
             }
           },
           {
@@ -319,9 +304,7 @@ const routes = [
             component: 'monitor/logininfor/index',
             meta: {
               title: '登录日志',
-              icon: 'logininfor',
-              noCache: false,
-              link: null
+              icon: 'logininfor'
             }
           }
         ]
