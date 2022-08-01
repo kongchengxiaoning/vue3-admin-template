@@ -11,10 +11,13 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { useTagsViewStoreWithOut } from '@/store/modules/tagsView'
+
+const tagsViewStore = useTagsViewStoreWithOut()
 
 const routeView = useRoute()
-
+tagsViewStore.addCachedView(routeView)
 const cachedViews = computed(() => {
-  return routeView.meta?.keepAlive ? [routeView.name] : []
+  return tagsViewStore.getCachedViews
 })
 </script>

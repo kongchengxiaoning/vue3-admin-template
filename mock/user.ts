@@ -22,8 +22,8 @@ const users = {
       userId: 1,
       deptId: 103,
       userName: 'admin',
-      nickName: '若依',
-      email: 'ry@163.com',
+      nickName: '9527',
+      email: '9527@163.com',
       phonenumber: '15888888888',
       sex: '1',
       avatar: '',
@@ -44,7 +44,7 @@ const users = {
         ancestors: null,
         deptName: '研发部门',
         orderNum: '1',
-        leader: '若依',
+        leader: '9527',
         phone: null,
         email: null,
         status: '0',
@@ -99,7 +99,7 @@ const users = {
       deptId: 103,
       userName: 'editor',
       nickName: '李信',
-      email: 'ry@163.com',
+      email: 'lx@163.com',
       phonenumber: '15888888888',
       sex: '1',
       avatar: '',
@@ -177,8 +177,19 @@ const routes = [
         name: 'ListIndex',
         component: 'list/index',
         meta: {
-          title: '自定义列表',
-          icon: 'list'
+          title: '列表',
+          icon: 'list',
+          breadcrumb: false
+        }
+      },
+      {
+        path: 'details/:id',
+        name: 'ListDetails',
+        hidden: true,
+        component: 'list/details',
+        meta: {
+          title: '详情',
+          activeMenu: '/list/index'
         }
       }
     ]

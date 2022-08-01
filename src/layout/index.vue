@@ -14,7 +14,8 @@
 </template>
 
 <script setup lang="ts" name="Layout">
-import { computed } from 'vue'
+import { computed, watchEffect } from 'vue'
+import { useWindowSize } from '@vueuse/core'
 import { AppMain, NavBar, BreadCrumb, SideBar } from './'
 import { useAppStoreWithOut } from '@/store/modules/app'
 
@@ -29,6 +30,21 @@ const classObj = computed(() => ({
   withoutAnimation: sidebar.value.withoutAnimation,
   mobile: device.value === 'mobile'
 }))
+
+const { width } = useWindowSize()
+const WIDTH = 992 // refer to Bootstrap's responsive design
+
+watchEffect(() => {
+  if (device.value === 'mobile' && sidebar.value.opened) {
+    appStore.closeSideBar({ withoutAnimation: false })
+  }
+  if (width.value - 1 < WIDTH) {
+    appStore.toggleDevice('mobile')
+    appStore.closeSideBar({ withoutAnimation: true })
+  } else {
+    appStore.toggleDevice('desktop')
+  }
+})
 </script>
 
 <style lang="scss" scoped>
