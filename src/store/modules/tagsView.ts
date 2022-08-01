@@ -14,7 +14,7 @@ export const useTagsViewStore = defineStore({
   actions: {
     addCachedView(route) {
       if (this.cachedViews.includes(route.name)) return
-      if (route.meta.noCache) {
+      if (route.meta.keepAlive) {
         this.cachedViews.push(route.name)
       }
     }

@@ -9,14 +9,27 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import { useRoute } from 'vue-router'
+import { computed, watch, unref } from 'vue'
+import { useRouter } from 'vue-router'
 import { useTagsViewStoreWithOut } from '@/store/modules/tagsView'
 
 const tagsViewStore = useTagsViewStoreWithOut()
+const { currentRoute } = useRouter()
+console.log(currentRoute)
+watch(
+  () => unref(currentRoute).path,
+  () => {
+    const { name } = unref(currentRoute)
 
-const routeView = useRoute()
-tagsViewStore.addCachedView(routeView)
+    if (name) {
+      tagsViewStore.addCachedView(unref(currentRoute))
+    }
+  },
+  {
+    immediate: true
+  }
+)
+
 const cachedViews = computed(() => {
   return tagsViewStore.getCachedViews
 })
