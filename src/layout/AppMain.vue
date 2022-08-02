@@ -8,14 +8,14 @@
   </router-view>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { computed, watch, unref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useTagsViewStoreWithOut } from '@/store/modules/tagsView'
 
 const tagsViewStore = useTagsViewStoreWithOut()
 const { currentRoute } = useRouter()
-console.log(currentRoute)
+
 watch(
   () => unref(currentRoute).path,
   () => {
