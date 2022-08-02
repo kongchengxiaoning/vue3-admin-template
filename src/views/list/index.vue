@@ -1,5 +1,5 @@
 <template>
-  <div class="table">
+  <div class="wrap">
     <el-table
       :data="tableData"
       style="width: 100%"
@@ -55,7 +55,7 @@ const handleClick = (index) => {
 </script>
 
 <style lang="scss" scoped>
-.table {
+.wrap {
   padding: 20px;
 }
 </style>

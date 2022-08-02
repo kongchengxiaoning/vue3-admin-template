@@ -1,9 +1,9 @@
 <template>
-  <div class="center">
+  <div class="wrap">
     <img src="@/assets/images/logo.png" alt="Vue logo" />
     <hello-world msg="Hello Vue 3 + TypeScript + Vite" />
-    <div>x: {{ x }} - y: {{ y }}</div>
-    <div>name: {{ getUserInfo.userName }}</div>
+    <p>x: {{ x }} - y: {{ y }}</p>
+    <p>name: {{ getUserInfo.userName }}</p>
     <el-button v-hasPermi="['monitor:job:add']">权限按钮</el-button>
   </div>
 </template>
@@ -22,7 +22,7 @@ const { x, y } = useMousePosition()
 </script>
 
 <style lang="scss" scoped>
-.center {
+.wrap {
   text-align: center;
 }
 </style>

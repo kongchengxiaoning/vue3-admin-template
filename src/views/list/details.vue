@@ -1,5 +1,5 @@
 <template>
-  <div class="details">
+  <div class="wrap">
     <ul>
       <li>date：{{ tableData[route.params.id]?.date }}</li>
       <li>name：{{ tableData[route.params.id]?.name }}</li>
@@ -47,7 +47,7 @@ const handleBack = () => {
 </script>
 
 <style lang="scss" scoped>
-.details {
+.wrap {
   padding: 20px;
 
   ul {

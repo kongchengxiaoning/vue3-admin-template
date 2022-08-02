@@ -1,14 +1,14 @@
 <template>
   <router-view v-slot="{ Component, route }">
-    <transition name="fade-transform" mode="out-in">
+    <transition name="fade-transform" mode="out-in" appear>
       <keep-alive :include="cachedViews">
-        <component :is="Component" :key="route.path" />
+        <component :is="Component" :key="route.fullPath" />
       </keep-alive>
     </transition>
   </router-view>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts" name="AppMain">
 import { computed, watch, unref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useTagsViewStoreWithOut } from '@/store/modules/tagsView'

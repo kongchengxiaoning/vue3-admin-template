@@ -1,6 +1,7 @@
 <template>
-  <div class="container">
+  <div class="wrap">
     <svg-icon class="iconfont" icon-class="404" />
+
     <div class="bullshit">
       <div class="bullshit__oops">404错误!</div>
       <div class="bullshit__headline">找不到网页！</div>
@@ -13,11 +14,12 @@
 </template>
 
 <style lang="scss" scoped>
-.container {
+.wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20vh;
+
   @keyframes slideUp {
     0% {
       transform: translateY(60px);
@@ -28,6 +30,7 @@
       opacity: 1;
     }
   }
+
   .iconfont {
     opacity: 0;
     color: $main-color;
@@ -38,11 +41,13 @@
     animation-fill-mode: forwards;
     margin-right: 20px;
   }
+
   .bullshit {
     position: relative;
     float: left;
     width: 300px;
     overflow: hidden;
+
     &__oops {
       font-size: 32px;
       font-weight: bold;
@@ -54,6 +59,7 @@
       animation-duration: 0.5s;
       animation-fill-mode: forwards;
     }
+
     &__headline {
       font-size: 20px;
       line-height: 24px;
@@ -66,6 +72,7 @@
       animation-delay: 0.1s;
       animation-fill-mode: forwards;
     }
+
     &__info {
       font-size: 13px;
       line-height: 21px;
@@ -77,6 +84,7 @@
       animation-delay: 0.2s;
       animation-fill-mode: forwards;
     }
+
     &__return-home {
       display: block;
       float: left;
