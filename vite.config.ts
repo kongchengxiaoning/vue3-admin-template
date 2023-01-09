@@ -40,6 +40,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
 
     server: {
       host: true,
+      open: true,
       port: 9527,
       proxy: {
         '/api': {
@@ -71,8 +72,8 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       preprocessorOptions: {
         scss: {
           additionalData: `
-						@import "./src/assets/styles/global.scss";
-						@import "./src/assets/styles/mixin.scss";
+            @use "./src/assets/styles/global.scss" as *;
+            @use "./src/assets/styles/mixin.scss" as *;
 					`
         }
       }
