@@ -64,7 +64,6 @@ module.exports = {
       }
     ],
     'vue/multi-word-component-names': 'off',
-    'vue/v-on-event-hyphenation': 'off',
     'space-before-function-paren': 'off',
     'no-use-before-define': 'off',
     'no-unused-vars': [
