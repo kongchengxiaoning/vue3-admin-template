@@ -52,6 +52,7 @@ watchEffect(() => {
   padding-top: $base-nav-bar-height;
   width: 100%;
   box-sizing: border-box;
+
   .app-main {
     min-height: calc(100vh - $base-nav-bar-height);
     width: 100%;

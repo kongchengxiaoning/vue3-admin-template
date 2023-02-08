@@ -28,12 +28,13 @@
 
 /* 清除浮动 */
 @mixin clearfix() {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: '';
     display: table;
   }
-  &:after {
+
+  &::after {
     clear: both;
   }
 }
@@ -43,25 +44,28 @@
  * $substract: 预留区域百分比
  */
 @mixin text-hid($line: 1, $substract: 0) {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: $line;
-
-  @if $line==1 {
+  @if $line == 1 {
     white-space: nowrap;
     display: block;
     width: 100% - $substract;
-  } @else {
+  }
+
+  @else {
     white-space: pre-wrap;
-    display: -webkit-box;
+    display: box;
     -webkit-box-orient: vertical;
   }
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $line;
 }
 
 /* 扩展点击区域 */
 @mixin extend-click() {
   position: relative;
-  &:before {
+
+  &::before {
     content: '';
     position: absolute;
     top: -10px;

@@ -125,6 +125,7 @@ getCookie()
   align-items: center;
   background-size: cover;
   margin-top: 25vh;
+
   .title {
     margin: 0px auto 30px auto;
     text-align: center;
@@ -137,12 +138,15 @@ getCookie()
     width: 400px;
     padding: 25px 25px 5px 25px;
     box-shadow: 0 20px 40px 0 rgb(0 0 0 / 18%);
+
     .el-input {
       height: 40px;
+
       input {
         height: 40px;
       }
     }
+
     .input-icon {
       height: 39px;
       width: 14px;

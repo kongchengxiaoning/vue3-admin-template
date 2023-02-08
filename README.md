@@ -56,6 +56,11 @@ yarn type:check
 yarn lint:eslint
 ```
 
+### stylelint and fixes files
+```
+yarn lint:stylelint
+```
+
 ### Jest Testing
 ```
 yarn test:unit

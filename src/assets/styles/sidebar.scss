@@ -2,30 +2,28 @@
 
   .main-container {
     min-height: 100%;
-    transition: margin-left .28s;
+    transition: margin-left 0.28s;
     margin-left: $base-sidebar-width;
     position: relative;
   }
 
   .sidebarHide {
-    margin-left: 0!important;
+    margin-left: 0 !important;
   }
 
   .sidebar-container {
-    -webkit-transition: width .28s;
     transition: width 0.28s;
     width: $base-sidebar-width !important;
     background-color: $base-menu-background;
     height: calc(100vh - $base-nav-bar-height);
     position: fixed;
-    font-size: 0px;
+    font-size: 0;
     top: $base-nav-bar-height;
     bottom: 0;
     left: 0;
     z-index: 1001;
     overflow: hidden;
-    -webkit-box-shadow: 2px 0 6px rgba(0,21,41,.35);
-    box-shadow: 2px 0 6px rgba(0,21,41,.35);
+    box-shadow: 2px 0 6px rgb(0 21 41 / 35%);
 
     // reset element-ui css
     .horizontal-collapse-transition {
@@ -37,7 +35,7 @@
     }
 
     .el-scrollbar__bar.is-vertical {
-      right: 0px;
+      right: 0;
     }
 
     .el-scrollbar {
@@ -70,7 +68,8 @@
       width: 100% !important;
     }
 
-    .el-menu-item, .menu-title {
+    .el-menu-item,
+    .menu-title {
       overflow: hidden !important;
       text-overflow: ellipsis !important;
       white-space: nowrap !important;
@@ -80,7 +79,7 @@
     .sub-menu-title-noDropdown,
     .el-sub-menu__title {
       &:hover {
-        background-color: rgba(0, 0, 0, 0.06) !important;
+        background-color: rgb(0 0 0 / 6%) !important;
       }
     }
 
@@ -88,16 +87,16 @@
       color: $base-menu-color-active !important;
     }
 
-    & .nest-menu .el-sub-menu>.el-sub-menu__title,
+    & .nest-menu .el-sub-menu > .el-sub-menu__title,
     & .el-sub-menu .el-menu-item {
       min-width: $base-sidebar-width !important;
 
       &:hover {
-        background-color: rgba(0, 0, 0, 0.06) !important;
+        background-color: rgb(0 0 0 / 6%) !important;
       }
     }
 
-    & .theme-dark .nest-menu .el-sub-menu>.el-sub-menu__title,
+    & .theme-dark .nest-menu .el-sub-menu > .el-sub-menu__title,
     & .theme-dark .el-sub-menu .el-menu-item {
       background-color: $base-sub-menu-background !important;
 
@@ -120,7 +119,8 @@
       padding: 0 !important;
       position: relative;
 
-      .el-tooltip, .el-menu-tooltip__trigger {
+      .el-tooltip,
+      .el-menu-tooltip__trigger {
         padding: 0 !important;
 
         .svg-icon {
@@ -132,27 +132,27 @@
     .el-sub-menu {
       overflow: hidden;
 
-      &>.el-sub-menu__title {
+      & > .el-sub-menu__title {
         padding: 0 !important;
 
         .svg-icon {
           margin-left: 20px;
         }
-
       }
     }
 
     .el-menu--collapse {
       .el-sub-menu {
-        &>.el-sub-menu__title {
-          &>span {
+        & > .el-sub-menu__title {
+          & > span {
             height: 0;
             width: 0;
             overflow: hidden;
             visibility: hidden;
             display: inline-block;
           }
-          &>i {
+
+          & > i {
             height: 0;
             width: 0;
             overflow: hidden;
@@ -171,11 +171,11 @@
   // mobile responsive
   .mobile {
     .main-container {
-      margin-left: 0px;
+      margin-left: 0;
     }
 
     .sidebar-container {
-      transition: transform .28s;
+      transition: transform 0.28s;
       width: $base-sidebar-width !important;
     }
 
@@ -199,17 +199,17 @@
 
 // when menu collapsed
 .el-menu--vertical {
-  &>.el-menu {
+  & > .el-menu {
     .svg-icon {
       margin-right: 16px;
     }
   }
 
-  .nest-menu .el-sub-menu>.el-sub-menu__title,
+  .nest-menu .el-sub-menu > .el-sub-menu__title,
   .el-menu-item {
     &:hover {
       // you can use $sub-menuHover
-      background-color: rgba(0, 0, 0, 0.06) !important;
+      background-color: rgb(0 0 0 / 6%) !important;
     }
   }
 

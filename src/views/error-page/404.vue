@@ -15,21 +15,21 @@
 
 <style lang="scss" scoped>
 .wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20vh;
-
   @keyframes slideUp {
     0% {
       transform: translateY(60px);
       opacity: 0;
     }
+
     100% {
       transform: translateY(0);
       opacity: 1;
     }
   }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20vh;
 
   .iconfont {
     opacity: 0;

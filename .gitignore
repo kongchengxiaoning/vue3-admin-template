@@ -1,26 +1,33 @@
 node_modules
-.DS_Store
 dist
-dist-ssr
-*.local
+.DS_Store
+.npmrc
+.cache
 
+*.local
 # local env files
 .env.local
 .env.*.local
+.eslintcache
 
 # Log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
 # Editor directories and files
 .idea
-.vscode
-.project
-.npmrc
-.history
+#.vscode
+.hbuilderx
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+.history

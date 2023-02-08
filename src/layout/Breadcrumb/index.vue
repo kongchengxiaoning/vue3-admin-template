@@ -77,25 +77,30 @@ getBreadcrumb()
   width: 100%;
   height: 50px;
   background: #ffffff;
+
   .breadcrumb-lable {
     display: flex;
     align-items: center;
     margin-left: 10px;
     font-size: 14px;
     color: #999999;
+
     .icon {
       font-size: 16px;
       margin-right: 4px;
     }
   }
+
   .el-breadcrumb {
     font-size: 14px;
+
     .el-breadcrumb__inner {
       a {
         color: #999999;
         font-weight: 400;
       }
     }
+
     .no-redirect {
       color: #666666;
       cursor: text;
