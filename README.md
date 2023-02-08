@@ -1,21 +1,20 @@
-# Vue3 Ts Admin
+<div align="center">
+<a href="https://github.com/kongchengxiaoning/vue3-ts-admin"> <img width="200" height="200" src="https://camo.githubusercontent.com/c8f91d18976e27123643a926a2588b8d931a0292fd0b6532c3155379e8591629/68747470733a2f2f7675656a732e6f72672f696d616765732f6c6f676f2e706e67"> </a> <br> <br>
 
-### PROD
-* [x] [vue3](https://v3.vuejs.org)
-* [x] [pinia](https://pinia.vuejs.org)
-* [x] [Vue-Router](https://next.router.vuejs.org/)
-* [x] [Axios](https://github.com/axios/axios)
+[![license](https://img.shields.io/github/license/anncwb/vue-vben-admin.svg)](LICENSE)
 
-### DEV
-* [x] [vite](https://github.com/vitejs/vite)
-* [x] [@vue/compiler-sfc](https://github.com/vuejs/rfcs/pull/227)
-* [x] [TypeScript](https://github.com/microsoft/TypeScript/#readme)
-* [x] [Sass](https://github.com/sass/sass)
-* [x] [Jest](https://jestjs.io/)
-* [x] [Mock](https://github.com/nuysoft/Mock)
-* [x] [Eslint](https://eslint.org/)
+<h1>Vue3 ts admin</h1>
+</div>
 
-## Usage
+## Preparation
+- [node](http://nodejs.org/) and [git](https://git-scm.com/) - Project development environment
+- [Vite](https://vitejs.dev/) - Familiar with vite features
+- [Vue3](https://v3.vuejs.org/) - Familiar with Vue basic syntax
+- [TypeScript](https://www.typescriptlang.org/) - Familiar with the basic syntax of `TypeScript`
+- [Es6+](http://es6.ruanyifeng.com/) - Familiar with es6 basic syntax
+- [Mock.js](https://github.com/nuysoft/Mock) - mockjs basic syntax
+
+## Install and use
 ### install dep
 ```
 yarn install
@@ -29,11 +28,6 @@ yarn dev
 ### Compiles and minifies for production
 ```
 yarn build
-```
-
-### preview the release environment effect
-```
-yarn serve
 ```
 
 ### static resource analysis
@@ -61,10 +55,17 @@ yarn lint:eslint
 yarn lint:stylelint
 ```
 
-### Jest Testing
-```
-yarn test:unit
-```
+## Browser support
+
+The `Chrome 80+` browser is recommended for local development
+
+Support modern browsers, not IE
+
+| IE | Edge | Firefox | Chrome | Safari |
+| :-: | :-: | :-: | :-: | :-: |
+| not support | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
+
+## Help information
 
 This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
