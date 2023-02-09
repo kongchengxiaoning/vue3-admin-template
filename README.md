@@ -25,11 +25,14 @@ git clone https://github.com/kongchengxiaoning/vue3-admin-template.git
 ```bash
 cd vue3-admin-template
 
-pnpm install
+# NPM
+$ npm install
 
-and
+# Yarn
+$ yarn install
 
-yarn install
+# pnpm
+$ pnpm install
 ```
 
 - run
