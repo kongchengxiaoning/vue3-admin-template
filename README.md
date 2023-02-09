@@ -13,44 +13,47 @@
 - [Mock.js](https://github.com/nuysoft/Mock) - mockjs basic syntax
 
 ## Install and use
-### install dep
+
+- Get the project code
+
+```bash
+git clone https://github.com/kongchengxiaoning/vue3-admin-template.git
 ```
+
+- Installation dependencies
+
+```bash
+cd vue3-admin-template
+
+pnpm install
+
+and
+
 yarn install
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn dev
+- run
+
+```bash
+pnpm dev
 ```
 
-### Compiles and minifies for production
-```
-yarn build
+- build
+
+```bash
+pnpm build
 ```
 
-### static resource analysis
-```
-yarn report
+- report
+
+```bash
+pnpm report
 ```
 
-### preview the release environment effect + static resource analysis
-```
-yarn preview
-```
+- Lints and fixes files
 
-### typescript inspect
-```
-yarn type:check
-```
-
-### Lints and fixes files
-```
-yarn lint:eslint
-```
-
-### stylelint and fixes files
-```
-yarn lint:stylelint
+```bash
+pnpm lint:eslint
 ```
 
 ## Browser support
