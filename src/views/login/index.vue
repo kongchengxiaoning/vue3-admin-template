@@ -2,6 +2,7 @@
   <div class="login">
     <el-form ref="ruleFormRef" :model="loginForm" :rules="loginRules" class="login-form">
       <h3 class="title">后台管理系统</h3>
+
       <el-form-item prop="username">
         <el-input
           v-model="loginForm.username"
@@ -10,11 +11,12 @@
           auto-complete="off"
           placeholder="账号"
         >
-          <template #prefix
-            ><svg-icon icon-class="user" class="el-input__icon input-icon"
-          /></template>
+          <template #prefix>
+            <svg-icon icon-class="user" class="el-input__icon input-icon" />
+          </template>
         </el-input>
       </el-form-item>
+
       <el-form-item prop="password">
         <el-input
           v-model="loginForm.password"
@@ -23,14 +25,16 @@
           auto-complete="off"
           placeholder="密码"
         >
-          <template #prefix
-            ><svg-icon icon-class="password" class="el-input__icon input-icon"
-          /></template>
+          <template #prefix>
+            <svg-icon icon-class="password" class="el-input__icon input-icon" />
+          </template>
         </el-input>
       </el-form-item>
-      <el-checkbox v-model="loginForm.rememberMe" style="margin: 0px 0px 25px 0px"
-        >记住密码</el-checkbox
-      >
+
+      <el-checkbox v-model="loginForm.rememberMe" style="margin: 0px 0px 25px 0px">
+        记住密码
+      </el-checkbox>
+
       <el-form-item style="width: 100%">
         <el-button
           :loading="loading"

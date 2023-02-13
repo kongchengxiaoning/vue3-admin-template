@@ -1,9 +1,9 @@
 <template>
   <div class="wrap">
     <ul>
-      <li>date：{{ tableData[route.params.id]?.date }}</li>
-      <li>name：{{ tableData[route.params.id]?.name }}</li>
-      <li>address：{{ tableData[route.params.id]?.address }}</li>
+      <li>date：{{ tableData[pageId].date }}</li>
+      <li>name：{{ tableData[pageId].name }}</li>
+      <li>address：{{ tableData[pageId].address }}</li>
     </ul>
 
     <div class="footer">
@@ -17,6 +17,8 @@ import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
 const router = useRouter()
+
+const pageId = route.params.id as string
 
 const tableData = [
   {
